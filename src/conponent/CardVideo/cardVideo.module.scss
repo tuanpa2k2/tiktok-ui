@@ -1,0 +1,97 @@
+.wrapper {
+    width: 245px;
+    height: 420px;
+    margin-bottom: 10px;
+
+    .video-c {
+        width: 100%;
+        height: 78%;
+        box-shadow: 0 0 3px var(--text-color);
+        border-radius: 8px;
+
+        video {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .title-name {
+        margin-top: 5px;
+        padding: 3px 0;
+        width: 100%;
+        height: 11%;
+
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
+
+    .detail {
+        width: 100%;
+        height: 11%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .account {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+
+            .avatar {
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .nick-name {
+                margin-left: 5px;
+                max-width: 150px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 1.5rem;
+                color: var(--text-color);
+                font-family: 'IBM Plex Sans', TikTokFont, Arial, Tahoma, PingFangSC, sans-serif;
+
+                &:hover {
+                    text-decoration: underline;
+                    cursor: pointer;
+                    color: black;
+                }
+            }
+        }
+
+        .view {
+            display: flex;
+            align-items: center;
+            color: var(--text-color);
+            font-weight: 600;
+
+            svg {
+                font-size: 17px;
+                margin-right: 5px;
+
+                &:hover {
+                    cursor: pointer;
+                    color: red;
+                }
+            }
+        }
+    }
+}

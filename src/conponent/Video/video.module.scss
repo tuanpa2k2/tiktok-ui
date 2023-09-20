@@ -1,0 +1,127 @@
+.wrapper {
+    width: 100%;
+    max-height: 700px;
+    min-height: 680px;
+    height: fit-content;
+    border-bottom: 1px solid #bbbbbb;
+    display: flex;
+    margin: 5px 0 15px 0;
+    padding-bottom: 10px;
+    position: relative; // cha cua follow-acc
+    scroll-snap-align: start; // snap video
+    scroll-margin-top: 60px;
+
+    .follow-acc {
+        position: absolute;
+        right: 0;
+        top: 5px;
+
+        button {
+            color: var(--primary);
+            width: 110px;
+            border: 1px solid var(--primary);
+        }
+    }
+
+    .col-left {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        padding-top: 5px;
+
+        .avatar {
+            border: 1px solid blue;
+            width: 52px;
+            height: 52px;
+            object-fit: cover;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+    .col-center {
+        width: 80%;
+        max-height: inherit;
+        padding: 5px;
+
+        .accounts {
+            height: 75px;
+
+            .name {
+                height: 35%;
+                font-weight: 600;
+                font-size: 1.7rem;
+
+                &:hover {
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+
+            .descriptions {
+                height: 65%;
+
+                word-wrap: break-word;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                display: -webkit-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: normal;
+            }
+        }
+
+        .video-c {
+            margin-top: 5px;
+            height: calc(100% - 75px);
+            border-radius: 8px;
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            cursor: pointer;
+
+            video {
+                height: 100%;
+                width: 100%;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    .col-right {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        .heart,
+        .comment,
+        .save,
+        .share {
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 13px;
+                border-radius: 50%;
+                background-image: linear-gradient(#ff9d9d, #c2afff, #adc7ff);
+
+                svg {
+                    font-size: 18px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0 0 5px var(--primary);
+                    color: var(--primary);
+                }
+            }
+
+            .views {
+                padding: 5px;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
